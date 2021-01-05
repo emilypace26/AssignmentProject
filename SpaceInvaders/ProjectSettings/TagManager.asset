@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerShot
+  - Bullet
+  - Green enemy
+  - blue enemy
+  - RedEnemies
+  - BlueEnemies
+  - GreenEnemies
   layers:
   - Default
   - TransparentFX
