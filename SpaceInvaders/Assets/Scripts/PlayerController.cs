@@ -4,44 +4,43 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-private Transform playerTransform;
+private Transform player;
 public float speed;
 public float maxBound, minBound;
 
     //Bullet creation
-    public GameObject bulletFired;
+    public GameObject shot;
+    public float shotSpawn;
     public float fireRate;
+
     private float nextFire;
 
 
+//use this instialization
     // Start is called before the first frame update
-    void Start()
-    {
-    playerTransform = GetComponent<Transform> ();
+    void Start(){
+        player = GetComponent<Transform> ();
     }
 
-    
-
-    // Update is called once per frame
-    void update()
-    {
-        if (Input.GetButton("Jump") && Time.time > nextFire)
-        {
-            Instantiate(bulletFired, playerTransform.position, playerTransform.rotation);
-            nextFire = Time.time + fireRate;
-        }
-    }
-    
     void FixedUpdate()
     // maximum and minimum bound of player when moving
     {
         float h = Input.GetAxis("Horizontal");{
-            if(playerTransform.position.x < minBound && h < 0)
+            if (player.position.x < minBound && h < 0)
         h = 0;
-        else if (playerTransform.position.x > maxBound && h > 0)
+        else if (player.position.x > maxBound && h > 0)
         h = 0;
         }
-        
-        playerTransform.position += Vector3.right * h * speed;
+            player.position += Vector3.right * h * speed;
+    }
+        void Update(){
+        // if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown("space")) {
+        Instantiate (shot);
+        Debug.Log("Space bar was pressed");}
         }
+    
 }
+
+
+

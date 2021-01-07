@@ -4,32 +4,38 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    private Transform bulletTransform;
+    private Transform bullet;
     public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        bulletTransform = GetComponent<Transform>();
+        bullet = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-            bulletTransform.position += Vector3.up * speed;
+        bullet.position += Vector3.up * speed;
+    
+        if (bullet.position.y >=10)
+        Destroy (gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "RedEnemies")
         Destroy(other.gameObject);
+        Destroy (other.gameObject);
 
         if (other.tag == "BlueEnemies")
+        Destroy(other.gameObject);
         Destroy(other.gameObject);
 
         if (other.tag == "GreenEnemies")
         Destroy(other.gameObject);
+        Destroy(other.gameObject);
+        //Increase player score ?
     }
-
-
-}
+    
+    }
