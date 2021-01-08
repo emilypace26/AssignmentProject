@@ -24,18 +24,20 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "RedEnemies")
+        if (other.tag == "RedEnemies"){
         Destroy(other.gameObject);
-        Destroy (other.gameObject);
+        Destroy (gameObject);
+        PlayerScore.playerScore += 6;}
 
-        if (other.tag == "BlueEnemies")
+        if (other.tag == "BlueEnemies"){
         Destroy(other.gameObject);
-        Destroy(other.gameObject);
+        Destroy(gameObject);
+        PlayerScore.playerScore += 4;}
 
-        if (other.tag == "GreenEnemies")
+        if (other.tag == "GreenEnemies"){
         Destroy(other.gameObject);
-        Destroy(other.gameObject);
-        //Increase player score ?
+        Destroy(gameObject);
+        PlayerScore.playerScore += 2;}
     }
     
     }

@@ -10,7 +10,7 @@ public float maxBound, minBound;
 
     //Bullet creation
     public GameObject shot;
-    public float shotSpawn;
+    public Transform shotSpawn;
     public float fireRate;
 
     private float nextFire;
@@ -38,6 +38,7 @@ public float maxBound, minBound;
             if (Input.GetKeyDown("space")) {
         Instantiate (shot);
         Debug.Log("Space bar was pressed");}
+        Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
         }
     
 }
