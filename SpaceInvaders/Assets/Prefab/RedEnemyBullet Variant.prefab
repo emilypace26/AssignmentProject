@@ -93,12 +93,17 @@ PrefabInstance:
     - target: {fileID: 7207870515657411592, guid: fbaa70fcebedb8941b50966facb17f13,
         type: 3}
       propertyPath: m_Name
-      value: RedEnemyBullet
+      value: RedEnemyBullet Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7207870515657411592, guid: fbaa70fcebedb8941b50966facb17f13,
         type: 3}
       propertyPath: m_TagString
       value: RedEnemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207870515657411592, guid: fbaa70fcebedb8941b50966facb17f13,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 884510992877954549, guid: fbaa70fcebedb8941b50966facb17f13, type: 3}
