@@ -11,6 +11,7 @@ TagManager:
   - RedEnemies
   - BlueEnemies
   - GreenEnemies
+  - RedEnemy
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,6 @@ public float maxBound, minBound;
 
     //Bullet creation
     public GameObject shot;
-    //public Transform shotSpawn;
     public float fireRate;
 
     private float nextFire;

@@ -29,8 +29,9 @@ public class EnemyController : MonoBehaviour{
             return;
         }
 
-        if (Random.value > fireRate){
-            Instantiate(shot, enemy.position, enemy.rotation);
+        if(Random.value > fireRate)
+        {
+            Instantiate (shot, enemy.position, enemy.rotation);
         }
             if (enemy.position.y <= -4) {
             GameOver.isPlayerDead = true;
