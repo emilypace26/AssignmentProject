@@ -33,7 +33,8 @@ public class EnemyController : MonoBehaviour{
         {
             Instantiate (shot, enemy.position, enemy.rotation);
         }
-            if (enemy.position.y <= -4) {
+        if (enemy.position.y <= -4) 
+        {
             GameOver.isPlayerDead = true;
             Time.timeScale = 0;
         }

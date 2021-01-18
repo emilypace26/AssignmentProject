@@ -8,10 +8,12 @@ TagManager:
   - Bullet
   - Green enemy
   - blue enemy
-  - RedEnemies
   - BlueEnemies
   - GreenEnemies
   - RedEnemy
+  - GreenEnemy
+  - BlueEnemy
+  - RedEnemies
   layers:
   - Default
   - TransparentFX

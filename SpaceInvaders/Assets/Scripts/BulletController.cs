@@ -24,10 +24,37 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "RedEnemy") {
-        Destroy(other.gameObject);
-        Destroy (gameObject);
-        PlayerScore.playerScore += 6;}
+        if (other.tag == "RedEnemy") 
+        {
+            PlayerScore playerScore = GameObject.Find("Score").GetComponent<PlayerScore>();
+            if(playerScore != null)
+            {
+                playerScore.IncremenScoreRed();
+            }
+            Destroy(other.gameObject);
+            Destroy (gameObject);
+            
+        }
+        if (other.tag =="GreenEnemy")
+        {
+            PlayerScore playerScore = GameObject.Find("Score").GetComponent<PlayerScore>();
+            if(playerScore != null)
+            {
+                playerScore.IncremenScoreGreen();
+            }
+            Destroy(other.gameObject);
+            Destroy (gameObject);
+        }
+        if (other.tag == "BlueEnemy")
+        {
+            PlayerScore playerScore = GameObject.Find("Score").GetComponent<PlayerScore>();
+            if(playerScore != null)
+            {
+                playerScore.IncremenScoreBlue();
+            }
+            Destroy(other.gameObject);
+            Destroy (gameObject);
+        }
     }
     
     }
