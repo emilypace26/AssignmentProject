@@ -9,7 +9,6 @@ public class EnemyController : MonoBehaviour{
     public GameObject shot;
     public Text winText;
     public Text restartText;
-    public Button MainMenu;
     public float fireRate = 0.997f;
 
 
