@@ -13,7 +13,11 @@ public class RestartLevel : MonoBehaviour
 
         SceneManager.LoadScene("SpaceInvaders");
 
+        if(Input.GetKeyDown(KeyCode.M)){
+        GameOver.isPlayerDead = false;
+
+        SceneManager.LoadScene("MainMenu");
     }
-        
+    }
     }
 }

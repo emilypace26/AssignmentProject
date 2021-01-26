@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour{
 
     public GameObject shot;
     public Text winText;
+    public Text restartText;
+    public Button MainMenu;
     public float fireRate = 0.997f;
 
 
@@ -45,6 +47,7 @@ public class EnemyController : MonoBehaviour{
     }
     if (enemyHolder.childCount == 0){
         winText.enabled = true;
+        restartText.enabled = true;
     }
     }
 }
